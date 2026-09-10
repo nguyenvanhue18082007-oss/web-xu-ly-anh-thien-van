@@ -370,3 +370,18 @@ main {
 .contact-info h2{
     font-family: Arial, Helvetica, sans-serif;
 }
+@media (max-width: 768px) {
+    .site-header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+    .site-header .home {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+    .hero-section h1 {
+        font-size: 20px;
+    }
+}
