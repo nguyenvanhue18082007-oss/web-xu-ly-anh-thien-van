@@ -67,11 +67,30 @@ hr {
 	margin-left: auto;
 }
 
+.menu-toggle {
+	display: none;
+	border: 0;
+	padding: 5px;
+	background: transparent;
+	cursor: pointer;
+}
+
+.menu-toggle img {
+	display: block;
+	width: 28px;
+	height: 28px;
+}
+
 .site-header .home a:hover {
 	color: var(--text2);
 	text-decoration-line: underline;
 	text-decoration-thickness: 1px;
 	text-underline-offset: 6px;
+}
+
+.site-header .home a {
+	color: var(--text2);
+	text-decoration: none;
 }
 
 main {
@@ -370,16 +389,46 @@ main {
 .contact-info h2{
     font-family: Arial, Helvetica, sans-serif;
 }
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .site-header {
-        flex-direction: column;
-        height: auto;
-        padding: 10px;
+		position: relative;
+		height: 50px;
+		padding: 0 20px;
     }
-    .site-header .home {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 8px;
+
+	.menu-toggle {
+		display: block;
+		margin-left: auto;
+	}
+
+	.site-header .home {
+		position: fixed;
+		top: 50px;
+		right: 0;
+		left: auto;
+		z-index: 100;
+		display: none;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 0;
+		width: min(240px, 78vw);
+		min-height: 260px;
+		padding: 18px 0;
+		background: #222222;
+		border-radius: 0 0 10px 0;
+		box-shadow: 3px 4px 10px rgb(0 0 0 / 30%);
+	}
+
+	.site-header nav.home.is-open {
+		display: flex !important;
+	}
+
+	.site-header .home a {
+		display: block;
+		width: 100%;
+		padding: 12px 20px;
+		box-sizing: border-box;
+		text-align: left;
     }
     .hero-section h1 {
         font-size: 20px;
