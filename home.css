@@ -43,7 +43,7 @@ hr {
 
 .site-header .img img {
 	display: flex;
-	width: 50px;
+	width: 40px;
 	height: auto;
 }
 
@@ -205,7 +205,7 @@ main {
 .loaigradient h3,
 .loaigradient h4 {
 	margin: 15px;
-	color: var(--text3);
+	color: var(--text1);
 }
 
 .loaigradient h3 {
@@ -321,6 +321,7 @@ main {
 	align-items: flex-start;
 	gap: 8px;
 	width: 180px;
+	font-weight: 700;
 }
 
 .footer-navigation h3 {
