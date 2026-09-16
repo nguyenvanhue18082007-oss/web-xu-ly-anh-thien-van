@@ -139,11 +139,19 @@ main {
 }
 .text-info h1 {
 	color: var(--text3);
+	transition: 0.3s;
+}
+.text-info h1:hover {
+	color: #4ea5d9;
 }
 .text-info span {
 	color: #4ea5d9;
 	font-family:Arial, Helvetica, sans-serif;
 	letter-spacing: 2px;
+	transition: 0.3s;
+}
+.text-info span:hover {
+	color: #0b4e75;
 }
 .concept-section h2,
 .processing-section h2,
