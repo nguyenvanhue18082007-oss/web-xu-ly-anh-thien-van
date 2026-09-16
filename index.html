@@ -34,7 +34,7 @@
                 <img src="siril.png" alt="logo siril" class="img-top">
                 
                 <div class="text-info">
-                    <h1>Hướng dẫn cách khử<br>Gradient bằng <span>Siril</span>.</h1>
+                    <h1>Hướng dẫn cách khử<br>Gradient bằng <a href="#">Siril</a>.</h1>
                   
                 </div>
             </div>
@@ -43,50 +43,49 @@
         <div class="box-1">
             <section class="concept-section" id="concept">
                 <div class="kngradient">
-                    <hr>
-                    <h2>Gradient là gì?</h2>
+                    <div class="h2">
+                        <h2><a href="https://www.skyatnightmagazine.com/astrophotography/fix-light-pollution-astrophotography-gradients">1. Gradient là gì?</a></h2>
+                    </div>
                     <p>Trong chụp ảnh thiên văn, Gradient là hiện tượng nền trời bị lệch màu hoặc sáng tối không đều trên toàn bộ bức ảnh, thay vì là một nền tối phẳng mượt.</p>
                     <p>Đây là "kẻ thù" lớn nhất khi kéo sáng (stretch) ảnh nền sâu (DSO) hay dải Ngân Hà, khiến các chi tiết tinh vân mờ bị che khuất.</p>
-                    <h2>Ví dụ thực tế dễ hình dung nhất:</h2>
-                    <p>
-                        Hãy tưởng tượng bạn đang đứng trong một căn phòng tối và bật một chiếc đèn bàn ở góc phòng: 
-                        <br>- Chỗ ngay sát chiếc đèn sẽ rất sáng. 
-                        <br>- Càng đi xa chiếc đèn về phía góc đối diện, phòng sẽ tối dần đi.
-                        <br>- Sự chuyển tiếp từ: Rất sáng -> Sáng vừa -> Tối dần -> Tối thui một cách mượt mà đó chính là Gradient sáng.
-                        <p>Nếu thay bóng đèn vàng bằng bóng đèn màu đỏ, bạn sẽ thấy góc phòng có một vệt màu đỏ loang dần ra rồi mất hẳn. Đó chính là Gradient màu.</p>
-                    </p>
+                    <h3>2. Ví dụ thực tế dễ hình dung nhất:</h3>
+                    <p>Hãy tưởng tượng bạn đang đứng trong một căn phòng tối và bật một chiếc đèn bàn ở góc phòng:</p>
+                    <ul>
+                        <li><p>Chỗ ngay sát chiếc đèn sẽ rất sáng.</p></li>
+                        <li><p>Càng đi xa chiếc đèn về phía góc đối diện, phòng sẽ tối dần đi.</p></li>
+                        <li><p>Sự chuyển tiếp từ: Rất sáng -> Sáng vừa -> Tối dần -> Tối thui một cách mượt mà đó chính là Gradient sáng.</p></li>
+                    </ul>
+                    <p>Nếu thay bóng đèn vàng bằng bóng đèn màu đỏ, bạn sẽ thấy góc phòng có một vệt màu đỏ loang dần ra rồi mất hẳn. Đó chính là Gradient màu.</p>
                     <a class="anhminhhoa1">
                         <img src="Screenshot 2026-09-09 130154.png" alt="ảnh minh họa gradient mầu">
-                        <p>Ảnh minh họa gradient mầu (M31).</p>
+                        <p>Ảnh minh họa gradient mầu (Messier 31), bạn có thể thấy rất nhiều loại mầu sắc xuất hiện trên nền ảnh.</p>
                     </a>
                 </div>
                 <div class="gradient2">
-                    <h2>Có 2 loại gradient chính</h2>
+                    <h2>2. Có 2 loại gradient chính.</h2>
                     <div class="gradient1">
                         <h3>1. Gradient trong Ảnh Thiên Văn (Astrophotography):</h3>
-                        <p>
-                            - Bản chất: Ánh sáng từ đèn đường, đô thị hoặc ánh Trăng chiếu vào bầu khí quyển và phản xạ lại vào ống kính.<br>
-                            - Biểu hiện: Nền trời bị một quầng sáng màu vàng, cam hoặc xanh lá cây tràn qua một góc (thường là phía gần chân trời).<br>
-                            - Cách xử lý: Dùng phép trừ (Subtraction) trong các công cụ Background Extraction (Siril, PixInsight, Graxpect) để loại bỏ.
-                        </p>
+                        <ul>
+                            <li><p>Bản chất: Nguyên nhân thường xuất phát từ ánh sáng đèn đường, đô thị hoặc ánh Trăng chiếu vào bầu khí quyển và phản xạ lại vào ống kính gây ra một số hiện tượng vô cùng khó chịu thậm chí gây hỏng data ngày hôm đó nếu ảnh hưởng mạnh.</p></li>
+                            <li><p>Biểu hiện: Nền trời bị một quầng sáng màu vàng, cam hoặc xanh lá cây tràn qua một góc hoặc nhiều vị trí khác nhau nhưng không đồng đều (thường là phía gần đường chân trời).</p></li>
+                            <li><p>Cách xử lý: Dùng phép trừ (Subtraction) trong các công cụ Background Extraction (Siril, PixInsight, Graxpect) để loại bỏ tương đối.</p></li>
+                        </ul>
                     </div>
                     <div class="gradient2">
                         <h3>2. Gradient do Quang học (Vignetting / Tối góc):</h3>
                         <div class="gradient3">
-                            <p class="gradient-description">
-                                Bản chất: Vật kính/Lens không phân bổ ánh sáng đều, làm trung tâm ảnh sáng hơn và 4 góc bị tối đi.
-                                <br>Biểu hiện: Bốn góc ảnh bị đen xì hoặc dính vệt tối hình tròn.
-                            </p>
+                            <p>Bản chất: Vật kính/Lens không phân bổ ánh sáng đều, làm trung tâm ảnh sáng hơn và 4 góc bị tối đi.</p>
+                            <p>Biểu hiện: Bốn góc ảnh bị đen xì hoặc dính vệt tối hình tròn.</p>
                             <a class="anhminhhoa1">
                                 <img src="Screenshot 2026-09-09 144744.png" alt="ảnh minh họa">
-                                <p>Ảnh minh họa.</p>
+                                <p>Bạn có thể thấy vùng trung tâm thì sáng nhưng càng ra 4 góc lại càng tối hơn (một tấm phơi sáng 30s_ISO800 | NIKON D7000 135mm samyang f2).</p>
                             </a>
                             <p class="gradient-description">
                                 Cách xử lý: Chụp file Flat frame chuẩn để triệt tiêu, hoặc dùng phép chia (Division) nếu xử lý hậu kỳ bằng phần mềm.
                             </p>
                             <a class="anhminhhoa1">
                                 <img src="Screenshot 2026-09-09 flat.png" alt="ảnh minh họa">
-                                <p>Ảnh flat cho thấy ánh sáng phân bố không đều trên ảnh.</p>
+                                <p>Ảnh flat cho thấy ánh sáng phân bố không đều trên ảnh (tối góc).</p>
                             </a>
                         </div>
                     </div>
@@ -95,94 +94,135 @@
     
             <section class="processing-section" id="processing">
                 <hr>
-                <h2 class="xuly">Cách xử lý Gradient bằng Siril.</h2>
+                <h2 class="xuly">3. Cách xử lý Gradient bằng Siril.</h2>
                 <div class="loaigradient">
-                    <h3>Có 2 cách khử Gradient chính.</h3>
+                    <ul>
+                        <li><p>Có 2 cách khử Gradient chính.</p></li>
+                    </ul>
                     <div class="cach1">
-                        <h4>Cách 1: Xử lý Gradient cho ảnh Thiên hà (Galaxy):</h4>
+                        <h3>Cách 1: Xử lý Gradient cho ảnh Thiên hà (Galaxy):</h3>
                         <div class="class1_1">
                             <p>Thiên hà là đối tượng tương đối dễ xử lý nền nhất, vì xung quanh thiên hà thường là khoảng không vũ trụ mang màu đen trung tính 
                                 (trừ trường hợp bạn phơi sáng hàng trăm giờ để lấy bụi IFC/High-latitude Dust – lúc này sẽ áp dụng theo cách xử lý Tinh vân).
                             </p>
                             <h4>Các bước thực hiện.</h4>
-                            <div class="img">1. Bật chế độ xem AutoStretch/Histogram: Trong Siril, chuyển chế độ xem từ Linear sang Histogram (hoặc AutoStretch). 
-                                Việc này giúp khuếch đại cực mạnh tín hiệu nền, làm lộ rõ các vùng Gradient xấu nhất để dễ kiểm soát.
+                            <p>1. Bật chế độ xem AutoStretch/Histogram:</p>
+                            <div class="img">
+                                <ul>
+                                    <li><p>Trong Siril, chuyển chế độ xem từ Linear sang Histogram (hoặc AutoStretch).
+                                         Việc này giúp khuếch đại cực mạnh tín hiệu nền, làm lộ rõ các vùng Gradient xấu nhất để dễ kiểm soát.</p></li>
+                                </ul>
+                                
                                 <a class="anhminhhoa1">
                                     <img src="Screenshot 2026-09-09 162200.png" alt="Ảnh minh họa bước xem Histogram">
                                     <p>Ảnh minh họa.</p>
                                 </a>
                             </div>
-                            <div class="img">2. Thử nghiệm Rải điểm mẫu tự động (Auto Generate):<br>
-                                - Mở công cụ Background Extraction.<br>
+                            <p>2. Thử nghiệm Rải điểm mẫu tự động (Auto Generate):</p>
+                            <div class="img">
+                                <ul>
+                                    <li><p>Mở công cụ Background Extraction.</p></li>
+                                </ul>
                                 <a class="anhminhhoa1">
                                     <img src="Screenshot 2026-09-09 162531.png" alt="ảnh minh họa">
-                                    <p>Vị trí của BE nằm trong Image Processing.</p>
+                                    <p>Vị trí của Background Extraction nằm trong Image Processing.</p>
                                 </a>
-                                - Nếu ảnh tương đối sạch, bấm Generate để Siril tự động rải các điểm mẫu (Sample points).
+                                <ul>
+                                    <li><p>Nếu ảnh tương đối sạch, bấm Generate để Siril tự động rải các điểm mẫu (Sample points).</p></li>
+                                </ul> 
                                 <a class="anhminhhoa1">
                                     <img src="Screenshot 2026-09-09 162823.png" alt="ảnh minh họa">
                                     <p>Ảnh sau khi được rải sample tự động.</p>
                                 </a>
                             </div>
-                            <p>3. Kiểm tra mô hình nền (Compute Background): Bấm Compute Background để xem trước mô hình nền mà phần mềm vừa tính toán.</p>
-                            <div class="img">Can thiệp thủ công (Fine-tuning):<br>
-                                Nếu phát hiện những khu vực bị đen sâu hoặc bị rực sáng bất thường, bạn cần chỉnh lại điểm mẫu thủ công.<br>
+                            <p>3. Kiểm tra mô hình nền (Compute Background):</p>
+                            <ul>
+                                <li><p>Bấm Compute Background để xem trước mô hình nền mà phần mềm vừa tính toán.</p></li>
+                            </ul>
+                            <p>4. Can thiệp thủ công (Fine-tuning):</p>
+                            <div class="img">
+                                
+                                <ul>
+                                    <li><p>Nếu phát hiện những khu vực bị đen sâu hoặc bị rực sáng bất thường, bạn cần chỉnh lại điểm mẫu thủ công bằng cái click chuột trái hoặc chuột phải để loại bỏ.</p></li>
+                                </ul>
+                                
                                 <a class="anhminhhoa1">
                                     <img src="Screenshot 2026-09-09 163017.png" alt="ảnh minh họa">
-                                    <p>ảnh xuất hiện khu vực đen bất thường do đặt sample vào nền tinh vân.</p>
+                                    <p>Ảnh xuất hiện khu vực đen bất thường do đặt sample vào nền tinh vân lúc này bạn cần loại sample đó đi.</p>
                                 </a>
-                                - Click chuột trái: Thêm điểm mẫu vào những vùng nền bị sót.<br>
-                                - Click chuột phải: Xóa bớt các điểm mẫu tự động đặt sai vị trí (đặc biệt là các điểm cắn vào đĩa thiên hà hoặc sao sáng, vì chúng sẽ làm lệch thuật toán và gây lõm nền).
+                                <ul>
+                                    <li><p>Click chuột trái: Thêm điểm mẫu vào những vùng nền bị sót.</p></li>
+                                    <li><p>Click chuột phải: Xóa bớt các điểm mẫu tự động đặt sai vị trí (đặc biệt là các điểm cắn vào đĩa thiên hà hoặc sao sáng,
+                                    vì chúng sẽ làm lệch thuật toán và gây lõm nền).</p></li>
+                                </ul>
                                 <a class="anhminhhoa1">
                                     <img src="Screenshot 2026-09-09 162823.png" alt="ảnh minh họa">
                                     <p>Sau khi loại bỏ sample xấu.</p>
                                 </a>
                             </div>
-                            <p>Áp dụng (Apply): Khi nền đã phẳng đều, chọn phép trừ (Subtraction) và bấm Apply.</p>
+                            <p>5. Áp dụng (Apply):</p>
+                            <ul>
+                                <li><p>Khi nền đã phẳng đều, chọn phép trừ (Subtraction) và bấm Apply.</p></li>
+                            </ul>
                         </div>
                     </div>
                     <div class="cach2">
                         <h4>Cách 2: Xử lý Gradient cho ảnh Tinh vân (Nebula):</h4>
-                        <div class1_2>
-                            <div class="img">Đây chắc chắn là kỹ thuật mà đa số anh em chụp ảnh thiên văn quan tâm nhất. Khác với thiên hà, ảnh tinh vân có các dải bụi phát xạ/phản xạ lan tỏa khắp khung hình. 
-                                Bạn không thể dùng chế độ rải tự động rồi bấm Apply là xong, mà đòi hỏi kỹ thuật đặt điểm mẫu thủ công cùng khả năng cảm nhận nền thật tốt.
+                        <div class="cach2_1">
+                            <div class="img"> 
+                                <p>Đây chắc chắn là kỹ thuật mà đa số anh em chụp ảnh thiên văn quan tâm nhất. Khác với thiên hà, ảnh tinh vân có các dải bụi phát xạ/phản xạ lan tỏa khắp khung hình. 
+                                Bạn không thể dùng chế độ rải tự động rồi bấm Apply là xong, mà đòi hỏi kỹ thuật đặt điểm mẫu thủ công cùng khả năng cảm nhận nền thật tốt.</p>
                                 <h4>Các bước thực hiện:</h4>
-                                <p>1. Bật chế độ xem Histogram: Giúp hiện rõ các dải Gradient ẩn và ranh giới giữa bụi tinh vân với nền trời thật.</p>
+                                <p>1. Bật chế độ xem Histogram:</p>
+                                <ul>
+                                    <li><p>Giúp hiện rõ các dải Gradient ẩn và ranh giới giữa bụi tinh vân với nền trời thật.</p></li>
+                                </ul>
                                 <a class="anhminhhoa1">
                                     <img src="Screenshot 2026-09-09 210831.png" alt="ảnh minh họa">
                                     <p>Ảnh tại khu vực trung tâm Milky Way.</p>
                                 </a>
-                                <p>2. Đặt các điểm mốc ban đầu ở 4 góc: Bắt đầu đặt điểm mẫu thủ công từ 4 góc ảnh – nơi thường chịu tác động của Vignetting hoặc ô nhiễm ánh sáng nhưng ít bị tinh vân che phủ.</p>
+                                <p>2. Đặt các điểm mốc ban đầu ở 4 góc:</p>
+                                <ul>
+                                    <li><p>Bắt đầu đặt điểm mẫu thủ công từ 4 góc ảnh – nơi thường chịu tác động của Vignetting hoặc ô nhiễm ánh sáng nhưng ít bị tinh vân che phủ.</p></li>
+                                </ul>
                                 <a class="anhminhhoa1">
                                     <img src="Screenshot 2026-09-09 211256.png" alt="ảnh minh họa">
                                     <p>Hãy chấm vào vị trí ít sao hoặc bụi tối (sample ko bắt buộc phải ở sát góc).</p>
                                 </a>
-                                <p>3. Rải điểm mẫu thủ công diện rộng:<br>
-                                    Chấm từng điểm mẫu một vào những "khoảng trống" giữa các dải tinh vân (những vùng nền trời thực sự hoặc vùng bụi tối đậm).<br>
-                                    Quy tắc sinh tử: Cực kỳ né tránh các vùng tinh vân sáng, vùng bụi phản xạ và các cụm sao đặc. Nếu đặt điểm mẫu vào đây, Siril sẽ nhầm các cấu trúc sáng này là 
-                                    "nền trời" và loại bỏ chúng, khiến ảnh bị nổ đốm đen sì và mất sạch chi tiết tự nhiên.
+                                <p>3. Rải điểm mẫu thủ công diện rộng:
+                                <ul>
+                                    <li><p>Chấm từng điểm mẫu một vào những "khoảng trống" giữa các dải tinh vân (những vùng nền trời thực sự hoặc vùng bụi tối đậm).</p></li>
+                                    <li><p>Quy tắc sinh tử: Cực kỳ né tránh các vùng tinh vân sáng, vùng bụi phản xạ và các cụm sao đặc. Nếu đặt điểm mẫu vào đây, Siril sẽ nhầm các cấu trúc sáng này là 
+                                        "nền trời" và loại bỏ chúng, khiến ảnh bị nổ đốm đen sì và mất sạch chi tiết tự nhiên.</p></li>
+                                </ul>
                                 </p>
                                 <a class="anhminhhoa1">
                                     <img src="Screenshot 2026-09-09 211320.png" alt="ảnh minh họa">
                                     <p>Ưu tiên đặt vào những khu vực bụi tối, ít sao.</p>
                                 </a>
-                                <p>4. Bấm Compute Background liên tục để kiểm tra:<br>
-                                    Sau khi đặt thêm một vài điểm, bấm Compute Background ngay để kiểm tra mô hình nền.<br>
-                                    Nếu thấy mô hình nền xuất hiện các "vùng lõm" dị thường, hãy dùng chuột phải xóa ngay điểm mẫu vừa đặt ở khu vực đó.<br>
+                                <p>4. Bấm Compute Background liên tục để kiểm tra:</p>
+                                <ul>
+                                    <li><p>Sau khi đặt thêm một vài điểm, bấm Compute Background ngay để kiểm tra mô hình nền.</p></li>
+                                    <li><p>Nếu thấy mô hình nền xuất hiện các "vùng lõm" dị thường, hãy dùng chuột phải xóa ngay điểm mẫu vừa đặt ở khu vực đó.</p></li>
+                                </ul>
+                                    
                                 </p>
                                 <a class="anhminhhoa1">
                                     <img src="Screenshot 2026-09-09 211513.png" alt="ảnh minh họa">
                                 </a>
-                                <p>5. Hoàn tất xử lý: Khi mô hình nền mô phỏng đúng dải Gradient ô nhiễm mà không ăn vào tinh vân, chọn Subtraction và bấm Apply.</p>
+                                <p>5. Hoàn tất xử lý:</p>
+                                <ul>
+                                    <li><p>Khi mô hình nền mô phỏng đúng dải Gradient ô nhiễm mà không ăn vào tinh vân, chọn Subtraction và bấm Apply.</p></li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
+            <hr>
+            <h2>4. Tải File Thực Hành.</h2>
             </section>
     
             <section class="practice-section" id="practice">
-                <hr>
-                <h2>Tải File Thực Hành (Practice Data)</h2>
                 <div class="file">
                     <a class="fit" href="https://drive.google.com/drive/folders/1oxUNJWswvfsIbe_XWQVmPsKmY2vsALI6?usp=sharing">
                         <img src="masterLight_BIN-1_4948x3280_EXPOSURE-30.00s_FILTER-NoFilter_RGB_fastIntegration_autocrop.jpg" alt="file xisf">
@@ -194,29 +234,26 @@
                     </a>
                 </div>
                 <div class="thongso">
-                    <a class="img">
+                    <div class="img">
                         <h4>Tên mục tiêu:</h4>
-                        <p> Thiên hà Andromeda | Messier 31.</p>
-                    </a>
-                    <a class="img">
+                        <a href="https://en.wikipedia.org/wiki/Andromeda_Galaxy"> Thiên hà Andromeda | Messier 31.</a>
+                    </div>
+                    <div class="img">
                         <h4>Thông số:</h4>
-                        <p> 243x30s_ISO800.</p>
-                    </a>
-                    <a class="img">
-                        <h4>Thiết bị chụp:</h4>
-                    </a>
-                    <a class="img">
-                        <h4>- Camera:</h4>
-                        <p> Nikon D7000 @f2 | Stock.</p>
-                    </a>
-                    <a class="img">
-                        <h4>- Ống kính:</h4>
-                        <p> Lens 135mm samyang f2.</p>
-                    </a>
-                    <a class="img">
-                        <h4>- Ô nhiễm sáng:</h4>
-                        <p> Bortle 4,5</p>
-                    </a>
+                        <a> 243x30s_ISO800.</a>
+                    </div>
+                    <div class="img">
+                        <h4>Camera:</h4>
+                        <a href="https://en.wikipedia.org/wiki/Nikon_D7000"> Nikon D7000 @f2 | Stock.</a>
+                    </div>
+                    <div class="img">
+                        <h4>Ống kính:</h4>
+                        <a href="https://app.astrobin.com/equipment/explorer/telescope/2487/samyang-135mm-f20-ed-umc"> Lens 135mm samyang f2.</a>
+                    </div>
+                    <div class="img">
+                        <h4>Ô nhiễm sáng:</h4>
+                        <a> Bortle 4,5</a>
+                    </div>
                 </div>
             </section>
         </div>
