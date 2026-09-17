@@ -47,7 +47,7 @@
                         <h2><a href="https://www.skyatnightmagazine.com/astrophotography/fix-light-pollution-astrophotography-gradients">1. Gradient là gì?</a></h2>
                     </div>
                     <p>Trong chụp ảnh thiên văn, Gradient là hiện tượng nền trời bị lệch màu hoặc sáng tối không đều trên toàn bộ bức ảnh, thay vì là một nền tối phẳng mượt.</p>
-                    <p>Đây là "kẻ thù" lớn nhất khi kéo sáng (stretch) ảnh nền sâu (DSO) hay dải Ngân Hà, khiến các chi tiết tinh vân mờ bị che khuất.</p>
+                    <p>Đây là một trong những vấn đề nền ảnh khó chịu nhất khi kéo sáng (stretch) ảnh nền sâu (DSO) hay dải Ngân Hà, khiến các chi tiết tinh vân mờ bị che khuất.</p>
                     <h3>2. Ví dụ thực tế dễ hình dung nhất:</h3>
                     <p>Hãy tưởng tượng bạn đang đứng trong một căn phòng tối và bật một chiếc đèn bàn ở góc phòng:</p>
                     <ul>
@@ -62,14 +62,13 @@
                     </a>
                 </div>
                 <div class="gradient2">
-                    <h2>2. Có 2 loại gradient chính.</h2>
+                    <hr>
+                    <h2><a href="#">2. Có 2 loại gradient chính.</a></h2>
                     <div class="gradient1">
                         <h3>1. Gradient trong Ảnh Thiên Văn (Astrophotography):</h3>
-                        <ul>
-                            <li><p>Bản chất: Nguyên nhân thường xuất phát từ ánh sáng đèn đường, đô thị hoặc ánh Trăng chiếu vào bầu khí quyển và phản xạ lại vào ống kính gây ra một số hiện tượng vô cùng khó chịu thậm chí gây hỏng data ngày hôm đó nếu ảnh hưởng mạnh.</p></li>
-                            <li><p>Biểu hiện: Nền trời bị một quầng sáng màu vàng, cam hoặc xanh lá cây tràn qua một góc hoặc nhiều vị trí khác nhau nhưng không đồng đều (thường là phía gần đường chân trời).</p></li>
-                            <li><p>Cách xử lý: Dùng phép trừ (Subtraction) trong các công cụ Background Extraction (Siril, PixInsight, Graxpect) để loại bỏ tương đối.</p></li>
-                        </ul>
+                        <p>Bản chất: Nguyên nhân thường xuất phát từ ánh sáng đèn đường, đô thị hoặc ánh Trăng chiếu vào bầu khí quyển và phản xạ lại vào ống kính gây ra một số hiện tượng vô cùng khó chịu thậm chí gây hỏng data ngày hôm đó nếu ảnh hưởng mạnh.</p>
+                        <p>Biểu hiện: Nền trời bị một quầng sáng màu vàng, cam hoặc xanh lá cây tràn qua một góc hoặc nhiều vị trí khác nhau nhưng không đồng đều (thường là phía gần đường chân trời).</p>
+                        <p>Cách xử lý: Sử dụng công cụ Background Extraction để phần mềm ước tính phần nền không mong muốn từ các điểm mẫu (Sample), sau đó hiệu chỉnh phần Gradient khỏi ảnh bằng phép trừ Subtraction.</p>
                     </div>
                     <div class="gradient2">
                         <h3>2. Gradient do Quang học (Vignetting / Tối góc):</h3>
@@ -80,9 +79,9 @@
                                 <img src="Screenshot 2026-09-09 144744.png" alt="ảnh minh họa">
                                 <p>Bạn có thể thấy vùng trung tâm thì sáng nhưng càng ra 4 góc lại càng tối hơn (một tấm phơi sáng 30s_ISO800 | NIKON D7000 135mm samyang f2).</p>
                             </a>
-                            <p class="gradient-description">
-                                Cách xử lý: Chụp file Flat frame chuẩn để triệt tiêu, hoặc dùng phép chia (Division) nếu xử lý hậu kỳ bằng phần mềm.
-                            </p>
+                            <div class="gradient-description">
+                                Cách xử lý: <a href="#">Vignetting</a> thường được hiệu chỉnh bằng <a href="#">Flat frame</a> trong quá trình calibration. Flat frame ghi lại sự phân bố ánh sáng không đồng đều của hệ thống quang học, từ đó phần mềm có thể dùng nó để hiệu chỉnh vùng sáng tối không đều trên ảnh.
+                            </div>
                             <a class="anhminhhoa1">
                                 <img src="Screenshot 2026-09-09 flat.png" alt="ảnh minh họa">
                                 <p>Ảnh flat cho thấy ánh sáng phân bố không đều trên ảnh (tối góc).</p>
@@ -96,12 +95,15 @@
                 <hr>
                 <h2 class="xuly">3. Cách xử lý Gradient bằng Siril.</h2>
                 <div class="loaigradient">
-                    <ul>
-                        <li><p>Có 2 cách khử Gradient chính.</p></li>
-                    </ul>
+                    <div class="loaigradient1">
+                        <p>Trong Siril, cách xử lý Gradient sẽ khác nhau tùy vào loại đối tượng bạn đang chụp.</p>
+                        <p>Với ảnh thiên hà, vùng nền xung quanh thường có nhiều khoảng trống nên có thể bắt đầu bằng việc để Siril tự động tạo Sample.</p>
+                        <p>Với ảnh tinh vân, cấu trúc của đối tượng thường lan rộng khắp khung hình, vì vậy cần kiểm soát Sample thủ công cẩn thận hơn.</p>
+                    </div>
                     <div class="cach1">
                         <h3>Cách 1: Xử lý Gradient cho ảnh Thiên hà (Galaxy):</h3>
                         <div class="class1_1">
+                            <p>Trước tiên, ta cần cho Siril biết những khu vực nào trong ảnh được xem là nền trời. Siril sẽ lấy các điểm mẫu này để xây dựng một mô hình Gradient. Sau khi kiểm tra mô hình và loại bỏ những Sample đặt sai, phần mềm sẽ dùng mô hình đó để hiệu chỉnh ảnh.</p>
                             <p>Thiên hà là đối tượng tương đối dễ xử lý nền nhất, vì xung quanh thiên hà thường là khoảng không vũ trụ mang màu đen trung tính 
                                 (trừ trường hợp bạn phơi sáng hàng trăm giờ để lấy bụi IFC/High-latitude Dust – lúc này sẽ áp dụng theo cách xử lý Tinh vân).
                             </p>
@@ -128,7 +130,8 @@
                                     <p>Vị trí của Background Extraction nằm trong Image Processing.</p>
                                 </a>
                                 <ul>
-                                    <li><p>Nếu ảnh tương đối sạch, bấm Generate để Siril tự động rải các điểm mẫu (Sample points).</p></li>
+                                    <li><p>Nếu ảnh tương đối sạch, bấm Generate để Siril tự động rải các điểm mẫu (Sample points) lên những vùng mà phần mềm dự đoán là nền ảnh.</p></li>
+                                    <li><p>Các điểm này sẽ được sử dụng để tính toán mô hình Gradient ở bước tiếp theo.</p></li>
                                 </ul> 
                                 <a class="anhminhhoa1">
                                     <img src="Screenshot 2026-09-09 162823.png" alt="ảnh minh họa">
@@ -137,7 +140,7 @@
                             </div>
                             <p>3. Kiểm tra mô hình nền (Compute Background):</p>
                             <ul>
-                                <li><p>Bấm Compute Background để xem trước mô hình nền mà phần mềm vừa tính toán.</p></li>
+                                <li><p>Bấm Compute Background để Siril tính toán mô hình nền dựa trên các Sample đã đặt.</p></li>
                             </ul>
                             <p>4. Can thiệp thủ công (Fine-tuning):</p>
                             <div class="img">
@@ -162,7 +165,7 @@
                             </div>
                             <p>5. Áp dụng (Apply):</p>
                             <ul>
-                                <li><p>Khi nền đã phẳng đều, chọn phép trừ (Subtraction) và bấm Apply.</p></li>
+                                <li><p>Khi mô hình nền đã hợp lý, chọn phép Subtraction rồi bấm Apply. Siril sẽ sử dụng mô hình Gradient vừa tính để loại phần nền không mong muốn khỏi ảnh.</p></li>
                             </ul>
                         </div>
                     </div>
@@ -181,38 +184,55 @@
                                     <img src="Screenshot 2026-09-09 210831.png" alt="ảnh minh họa">
                                     <p>Ảnh tại khu vực trung tâm Milky Way.</p>
                                 </a>
-                                <p>2. Đặt các điểm mốc ban đầu ở 4 góc:</p>
+                                <p>2. Tìm các vùng nền an toàn:</p>
                                 <ul>
-                                    <li><p>Bắt đầu đặt điểm mẫu thủ công từ 4 góc ảnh – nơi thường chịu tác động của Vignetting hoặc ô nhiễm ánh sáng nhưng ít bị tinh vân che phủ.</p></li>
+                                    <li><p>Bắt đầu kiểm tra từ các khu vực gần 4 góc ảnh vì đây thường là những vùng dễ quan sát Gradient. Tuy nhiên, Sample không bắt buộc phải nằm đúng ở 4 góc. Chỉ đặt Sample tại những vùng bạn chắc chắn là nền cần được hiệu chỉnh.</p></li>
                                 </ul>
                                 <a class="anhminhhoa1">
                                     <img src="Screenshot 2026-09-09 211256.png" alt="ảnh minh họa">
-                                    <p>Hãy chấm vào vị trí ít sao hoặc bụi tối (sample ko bắt buộc phải ở sát góc).</p>
+                                    <p>Hãy chấm vào vị trí ít sao hoặc bụi tối (Sample không bắt buộc phải ở sát góc).</p>
                                 </a>
                                 <p>3. Rải điểm mẫu thủ công diện rộng:
                                 <ul>
                                     <li><p>Chấm từng điểm mẫu một vào những "khoảng trống" giữa các dải tinh vân (những vùng nền trời thực sự hoặc vùng bụi tối đậm).</p></li>
-                                    <li><p>Quy tắc sinh tử: Cực kỳ né tránh các vùng tinh vân sáng, vùng bụi phản xạ và các cụm sao đặc. Nếu đặt điểm mẫu vào đây, Siril sẽ nhầm các cấu trúc sáng này là 
-                                        "nền trời" và loại bỏ chúng, khiến ảnh bị nổ đốm đen sì và mất sạch chi tiết tự nhiên.</p></li>
+                                    <li><p>Lưu ý quan trọng: Không đặt Sample lên vùng tinh vân sáng, bụi phản xạ, cụm sao hoặc những cấu trúc mà bạn muốn giữ lại. Nếu Sample được đặt lên các vùng này, Siril có thể coi tín hiệu thật của thiên thể là nền và loại bỏ nó trong quá trình xử lý.</p></li>
+                                    <li><p>Hiểu đơn giản: Đừng để Siril hiểu nhầm rằng “tinh vân là nền trời”.</p></li>
                                 </ul>
                                 </p>
                                 <a class="anhminhhoa1">
                                     <img src="Screenshot 2026-09-09 211320.png" alt="ảnh minh họa">
                                     <p>Ưu tiên đặt vào những khu vực bụi tối, ít sao.</p>
                                 </a>
-                                <p>4. Bấm Compute Background liên tục để kiểm tra:</p>
+                                <p>4. Dấu hiệu Sample đang đặt sai.</p>
                                 <ul>
-                                    <li><p>Sau khi đặt thêm một vài điểm, bấm Compute Background ngay để kiểm tra mô hình nền.</p></li>
+                                    <li><p>Mô hình nền xuất hiện các vùng sáng hoặc tối bất thường thay vì tạo thành một Gradient tương đối mượt.</p></li>
+                                    <li><p>Khi áp dụng, một phần của tinh vân hoặc thiên hà bị tối đi hoặc mất chi tiết.</p></li>
+                                    <li><p>Xuất hiện các vùng nền có hình dạng bất thường sau khi khử Gradient.</p></li>
+                                    <li><p>Một số vùng ảnh trở nên quá đen hoặc có màu sắc khác thường so với phần nền còn lại.</p></li>
+                                </ul>
+                                <a class="anhminhhoa1">
+                                    <img src="Screenshot 2026-09-17 101235.png" alt="ảnh minh họa">
+                                    <p>Ảnh tinh vân Pacman (NGC281) | Nguồn: Minh Quang.</p>
+                                </a>
+                                <p>5. Bấm Compute Background liên tục để kiểm tra:</p>
+                                <ul>
+                                    <li><p>Sau khi đặt thêm một vài Sample, bấm Compute Background để kiểm tra xem mô hình Gradient có phù hợp với nền ảnh hay không.</p></li>
                                     <li><p>Nếu thấy mô hình nền xuất hiện các "vùng lõm" dị thường, hãy dùng chuột phải xóa ngay điểm mẫu vừa đặt ở khu vực đó.</p></li>
                                 </ul>
                                     
                                 </p>
-                                <a class="anhminhhoa1">
-                                    <img src="Screenshot 2026-09-09 211513.png" alt="ảnh minh họa">
-                                </a>
-                                <p>5. Hoàn tất xử lý:</p>
+                                <div class="anhminhhoa1">
+                                    <a>
+                                        <img src="Screenshot 2026-09-17 103113.png" alt="Ảnh minh họa">
+                                    </a>
+                                    <a>
+                                        <img src="Screenshot 2026-09-09 211513.png" alt="Ảnh minh họa">
+                                        <p>Ảnh trước (trên) và sau (dưới) khi khử Gradient trông đã ổn hơn rất nhiều nhưng vẫn cần cải thiện thêm.</p>
+                                    </a>
+                                </div>
+                                <p>6. Hoàn tất xử lý:</p>
                                 <ul>
-                                    <li><p>Khi mô hình nền mô phỏng đúng dải Gradient ô nhiễm mà không ăn vào tinh vân, chọn Subtraction và bấm Apply.</p></li>
+                                    <li><p>Khi mô hình nền mô phỏng đúng Gradient cần loại bỏ và không bao phủ lên cấu trúc thật của tinh vân, chọn Subtraction và bấm Apply. Siril sẽ sử dụng mô hình này để hiệu chỉnh nền ảnh.</p></li>
                                 </ul>
                             </div>
                         </div>
@@ -236,7 +256,7 @@
                 <div class="thongso">
                     <div class="img">
                         <h4>Tên mục tiêu:</h4>
-                        <a href="https://en.wikipedia.org/wiki/Andromeda_Galaxy"> Thiên hà Andromeda | Messier 31.</a>
+                        <a href="https://en.wikipedia.org/wiki/Andromeda_Galaxy"> Thiên hà Andromeda.</a>
                     </div>
                     <div class="img">
                         <h4>Thông số:</h4>

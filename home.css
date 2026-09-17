@@ -165,7 +165,8 @@ ul {
 }
 .concept-section h2,
 .processing-section h2,
-.practice-section h2 {
+.practice-section h2,
+.gradient2 h2 {
 	margin: 15px;
 	color: var(--text1);
 	font-size: 25px;
@@ -173,9 +174,15 @@ ul {
 	line-height: 40px;
 	transition: 0.3s;
 }
+.gradient2 a {
+	color: var(--text1);
+	text-decoration: none;
+	transition: 0.3s;
+}
 .practice-section h2:hover,
 .concept-section h2:hover,
-.processing-section h2:hover {
+.processing-section h2:hover,
+.gradient2 a:hover {
 	color: var(--primary);
 }
 .concept-section h3 {
@@ -190,12 +197,24 @@ ul {
 	padding-left: 0%;
 }
 .concept-section p,
-.class1_1 p {
+.class1_1 p, .loaigradient1 p,
+.gradient-description{
 	line-height: 30px;
 	padding-left: 50px;
 	color: var(--text1);
 	font-size: 17px;
 	padding-right: 30px;
+	text-decoration: none;
+}
+.gradient-description a {
+	color: var(--text1);
+	text-decoration: none;
+	font-weight: 600;
+	transition: 0.3s;
+}
+.gradient-description a:hover {
+	color: var(--primary);
+	text-decoration: underline;
 }
 .cach1 img {
 	display: block;
@@ -212,23 +231,23 @@ ul {
 	margin: 0 auto;
 	width: 60%;
 	height: auto;
-	
+	border: 2px solid var(--text2);
 }
 .anhminhhoa1 img,
 .processing-section .anhminhhoa1 img {
 	display: block;
 	width: 98%;
 	margin: 0 auto;
-	border:2px solid var(--text2);
+	padding-top: 1%;
 }
 .anhminhhoa1 p,
-.processing-section .anhminhhoa1 p {
+.processing-section .anhminhhoa1 p{
 	color: var(--text2);
 	font-size: 15px;
 	font-weight: 500;
 	text-align: center;
-	padding-left: 0%;
-	padding-right: 0%;
+	padding-left: 2%;
+	padding-right: 2%;
 }
 .processing-section .img {
 	color: var(--text1);
@@ -495,6 +514,14 @@ ul {
         font-weight: 500;
         color: var(--text2);
         text-decoration: none;
-		white-space: nowrap;
-	}  
+	}
+	.anhminhhoa1 p,
+    .processing-section .anhminhhoa1 p{
+	    color: var(--text2);
+	    font-size: 13px;
+	    font-weight: 500;
+	    text-align: center;
+	    padding-left: 1%;
+	    padding-right: 1%;
+    }
 }
