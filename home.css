@@ -164,7 +164,7 @@ ul {
 	font-size: 17px;
 }
 .concept-section h2,
-.processing-section h2,
+.box-1 h2,
 .practice-section h2,
 .gradient2 h2 {
 	margin: 15px;
@@ -174,7 +174,9 @@ ul {
 	line-height: 40px;
 	transition: 0.3s;
 }
-.gradient2 a {
+.gradient2 a,
+.processing-section h2 a,
+.practice-section h2 a{
 	color: var(--text1);
 	text-decoration: none;
 	transition: 0.3s;
@@ -182,7 +184,9 @@ ul {
 .practice-section h2:hover,
 .concept-section h2:hover,
 .processing-section h2:hover,
-.gradient2 a:hover {
+.gradient2 a:hover,
+.processing-section h2 a:hover,
+.practice-section h2 a:hover{
 	color: var(--primary);
 }
 .concept-section h3 {
@@ -251,7 +255,6 @@ ul {
 }
 .processing-section .img {
 	color: var(--text1);
-	font-size: 17px;
 	padding-right: 30px;
 	padding-left: 50px;
 }
@@ -265,8 +268,8 @@ ul {
 .gradient3 .gradient-description {
 	padding-left: 50px;
 }
-.loaigradient h3,
-.loaigradient h4 {
+.box-1 h3,
+.box-1 h4 {
 	margin: 15px;
 	color: var(--text1);
 	padding-left: 35px;
@@ -403,11 +406,6 @@ ul {
 .file p {
 	margin: 8px 0 0;
 }
-.thongso .img{
-	display: block;
-	padding-left: 25px;
-	color: var(--text1);
-}
 .thongso a {
 	font-weight: 500;
 	color: var(--text2);
@@ -417,14 +415,9 @@ ul {
 .thongso a:hover {
 	text-decoration: underline;
 }
-.thongso h4 {
-	color: var(--text1);
-	transition: 0.3s;
-}
 .thongso .img {
 	display: flex;
 	align-items: center;
-	margin-left: 25px;
 }
 .fit p {
     width: 80%;

@@ -93,7 +93,7 @@
     
             <section class="processing-section" id="processing">
                 <hr>
-                <h2 class="xuly">3. Cách xử lý Gradient bằng Siril.</h2>
+                <h2><a href="#">3. Cách xử lý Gradient bằng Siril.</a></h2>
                 <div class="loaigradient">
                     <div class="loaigradient1">
                         <p>Trong Siril, cách xử lý Gradient sẽ khác nhau tùy vào loại đối tượng bạn đang chụp.</p>
@@ -114,59 +114,66 @@
                                     <li><p>Trong Siril, chuyển chế độ xem từ Linear sang Histogram (hoặc AutoStretch).
                                          Việc này giúp khuếch đại cực mạnh tín hiệu nền, làm lộ rõ các vùng Gradient xấu nhất để dễ kiểm soát.</p></li>
                                 </ul>
-                                
-                                <a class="anhminhhoa1">
-                                    <img src="Screenshot 2026-09-09 162200.png" alt="Ảnh minh họa bước xem Histogram">
-                                    <p>Ảnh minh họa.</p>
-                                </a>
                             </div>
-                            <p>2. Thử nghiệm Rải điểm mẫu tự động (Auto Generate):</p>
+                            <a class="anhminhhoa1">
+                                <img src="Screenshot 2026-09-09 162200.png" alt="Ảnh minh họa bước xem Histogram">
+                                <p>Ảnh minh họa.</p>
+                            </a>
+                            <div class="img">
+                                <p>2. Thử nghiệm Rải điểm mẫu tự động (Auto Generate):</p>
+                            </div>
                             <div class="img">
                                 <ul>
                                     <li><p>Mở công cụ Background Extraction.</p></li>
                                 </ul>
-                                <a class="anhminhhoa1">
-                                    <img src="Screenshot 2026-09-09 162531.png" alt="ảnh minh họa">
-                                    <p>Vị trí của Background Extraction nằm trong Image Processing.</p>
-                                </a>
+                            </div>
+                            <a class="anhminhhoa1">
+                                <img src="Screenshot 2026-09-09 162531.png" alt="ảnh minh họa">
+                                <p>Vị trí của Background Extraction nằm trong Image Processing.</p>
+                            </a>
+                            <div class="img">
                                 <ul>
                                     <li><p>Nếu ảnh tương đối sạch, bấm Generate để Siril tự động rải các điểm mẫu (Sample points) lên những vùng mà phần mềm dự đoán là nền ảnh.</p></li>
                                     <li><p>Các điểm này sẽ được sử dụng để tính toán mô hình Gradient ở bước tiếp theo.</p></li>
                                 </ul> 
-                                <a class="anhminhhoa1">
-                                    <img src="Screenshot 2026-09-09 162823.png" alt="ảnh minh họa">
-                                    <p>Ảnh sau khi được rải sample tự động.</p>
-                                </a>
                             </div>
-                            <p>3. Kiểm tra mô hình nền (Compute Background):</p>
-                            <ul>
-                                <li><p>Bấm Compute Background để Siril tính toán mô hình nền dựa trên các Sample đã đặt.</p></li>
-                            </ul>
-                            <p>4. Can thiệp thủ công (Fine-tuning):</p>
+                            <a class="anhminhhoa1">
+                                <img src="Screenshot 2026-09-09 162823.png" alt="ảnh minh họa">
+                                <p>Ảnh sau khi được rải sample tự động.</p>
+                            </a>
                             <div class="img">
-                                
+                                <p>3. Kiểm tra mô hình nền (Compute Background):</p>
+                                <ul>
+                                    <li><p>Bấm Compute Background để Siril tính toán mô hình nền dựa trên các Sample đã đặt.</p></li>
+                                </ul>
+                                <p>4. Can thiệp thủ công (Fine-tuning):</p>
+                            </div>
+                            <div class="img">
                                 <ul>
                                     <li><p>Nếu phát hiện những khu vực bị đen sâu hoặc bị rực sáng bất thường, bạn cần chỉnh lại điểm mẫu thủ công bằng cái click chuột trái hoặc chuột phải để loại bỏ.</p></li>
                                 </ul>
-                                
-                                <a class="anhminhhoa1">
-                                    <img src="Screenshot 2026-09-09 163017.png" alt="ảnh minh họa">
-                                    <p>Ảnh xuất hiện khu vực đen bất thường do đặt sample vào nền tinh vân lúc này bạn cần loại sample đó đi.</p>
-                                </a>
+                            </div>
+                            <a class="anhminhhoa1">
+                                <img src="Screenshot 2026-09-09 163017.png" alt="ảnh minh họa">
+                                <p>Ảnh xuất hiện khu vực đen bất thường do đặt sample vào nền tinh vân lúc này bạn cần loại sample đó đi.</p>
+                            </a>
+                            <div class="img">
                                 <ul>
                                     <li><p>Click chuột trái: Thêm điểm mẫu vào những vùng nền bị sót.</p></li>
                                     <li><p>Click chuột phải: Xóa bớt các điểm mẫu tự động đặt sai vị trí (đặc biệt là các điểm cắn vào đĩa thiên hà hoặc sao sáng,
                                     vì chúng sẽ làm lệch thuật toán và gây lõm nền).</p></li>
                                 </ul>
-                                <a class="anhminhhoa1">
-                                    <img src="Screenshot 2026-09-09 162823.png" alt="ảnh minh họa">
-                                    <p>Sau khi loại bỏ sample xấu.</p>
-                                </a>
                             </div>
-                            <p>5. Áp dụng (Apply):</p>
-                            <ul>
-                                <li><p>Khi mô hình nền đã hợp lý, chọn phép Subtraction rồi bấm Apply. Siril sẽ sử dụng mô hình Gradient vừa tính để loại phần nền không mong muốn khỏi ảnh.</p></li>
-                            </ul>
+                            <a class="anhminhhoa1">
+                                <img src="Screenshot 2026-09-09 162823.png" alt="ảnh minh họa">
+                                <p>Sau khi loại bỏ sample xấu.</p>
+                            </a>
+                            <div class="img">
+                                <p>5. Áp dụng (Apply):</p>
+                                <ul>
+                                    <li><p>Khi mô hình nền đã hợp lý, chọn phép Subtraction rồi bấm Apply. Siril sẽ sử dụng mô hình Gradient vừa tính để loại phần nền không mong muốn khỏi ảnh.</p></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                     <div class="cach2">
@@ -180,29 +187,34 @@
                                 <ul>
                                     <li><p>Giúp hiện rõ các dải Gradient ẩn và ranh giới giữa bụi tinh vân với nền trời thật.</p></li>
                                 </ul>
-                                <a class="anhminhhoa1">
-                                    <img src="Screenshot 2026-09-09 210831.png" alt="ảnh minh họa">
-                                    <p>Ảnh tại khu vực trung tâm Milky Way.</p>
-                                </a>
+                            </div>
+                            <a class="anhminhhoa1">
+                                <img src="Screenshot 2026-09-09 210831.png" alt="ảnh minh họa">
+                                <p>Ảnh tại khu vực trung tâm Milky Way.</p>
+                            </a>
+                            <div class="img">
                                 <p>2. Tìm các vùng nền an toàn:</p>
                                 <ul>
                                     <li><p>Bắt đầu kiểm tra từ các khu vực gần 4 góc ảnh vì đây thường là những vùng dễ quan sát Gradient. Tuy nhiên, Sample không bắt buộc phải nằm đúng ở 4 góc. Chỉ đặt Sample tại những vùng bạn chắc chắn là nền cần được hiệu chỉnh.</p></li>
                                 </ul>
-                                <a class="anhminhhoa1">
-                                    <img src="Screenshot 2026-09-09 211256.png" alt="ảnh minh họa">
-                                    <p>Hãy chấm vào vị trí ít sao hoặc bụi tối (Sample không bắt buộc phải ở sát góc).</p>
-                                </a>
-                                <p>3. Rải điểm mẫu thủ công diện rộng:
+                            </div>
+                            <a class="anhminhhoa1">
+                                <img src="Screenshot 2026-09-09 211256.png" alt="ảnh minh họa">
+                                <p>Hãy chấm vào vị trí ít sao hoặc bụi tối (Sample không bắt buộc phải ở sát góc).</p>
+                            </a>
+                            <div class="img">
+                                <p>3. Rải điểm mẫu thủ công diện rộng:</p>
                                 <ul>
                                     <li><p>Chấm từng điểm mẫu một vào những "khoảng trống" giữa các dải tinh vân (những vùng nền trời thực sự hoặc vùng bụi tối đậm).</p></li>
                                     <li><p>Lưu ý quan trọng: Không đặt Sample lên vùng tinh vân sáng, bụi phản xạ, cụm sao hoặc những cấu trúc mà bạn muốn giữ lại. Nếu Sample được đặt lên các vùng này, Siril có thể coi tín hiệu thật của thiên thể là nền và loại bỏ nó trong quá trình xử lý.</p></li>
                                     <li><p>Hiểu đơn giản: Đừng để Siril hiểu nhầm rằng “tinh vân là nền trời”.</p></li>
                                 </ul>
-                                </p>
-                                <a class="anhminhhoa1">
-                                    <img src="Screenshot 2026-09-09 211320.png" alt="ảnh minh họa">
-                                    <p>Ưu tiên đặt vào những khu vực bụi tối, ít sao.</p>
-                                </a>
+                            </div>
+                            <a class="anhminhhoa1">
+                                <img src="Screenshot 2026-09-09 211320.png" alt="ảnh minh họa">
+                                <p>Ưu tiên đặt vào những khu vực bụi tối, ít sao.</p>
+                            </a>
+                            <div class="img">
                                 <p>4. Dấu hiệu Sample đang đặt sai.</p>
                                 <ul>
                                     <li><p>Mô hình nền xuất hiện các vùng sáng hoặc tối bất thường thay vì tạo thành một Gradient tương đối mượt.</p></li>
@@ -210,39 +222,42 @@
                                     <li><p>Xuất hiện các vùng nền có hình dạng bất thường sau khi khử Gradient.</p></li>
                                     <li><p>Một số vùng ảnh trở nên quá đen hoặc có màu sắc khác thường so với phần nền còn lại.</p></li>
                                 </ul>
-                                <a class="anhminhhoa1">
-                                    <img src="Screenshot 2026-09-17 101235.png" alt="ảnh minh họa">
-                                    <p>Ảnh tinh vân Pacman (NGC281) | Nguồn: Minh Quang.</p>
-                                </a>
+                            </div>
+                            <a class="anhminhhoa1">
+                                <img src="Screenshot 2026-09-17 101235.png" alt="ảnh minh họa">
+                                <p>Ảnh tinh vân Pacman (NGC281) | Nguồn: Minh Quang.</p>
+                            </a>
+                            <div class="img">
                                 <p>5. Bấm Compute Background liên tục để kiểm tra:</p>
                                 <ul>
                                     <li><p>Sau khi đặt thêm một vài Sample, bấm Compute Background để kiểm tra xem mô hình Gradient có phù hợp với nền ảnh hay không.</p></li>
                                     <li><p>Nếu thấy mô hình nền xuất hiện các "vùng lõm" dị thường, hãy dùng chuột phải xóa ngay điểm mẫu vừa đặt ở khu vực đó.</p></li>
                                 </ul>
-                                    
-                                </p>
-                                <div class="anhminhhoa1">
-                                    <a>
-                                        <img src="Screenshot 2026-09-17 103113.png" alt="Ảnh minh họa">
-                                    </a>
-                                    <a>
-                                        <img src="Screenshot 2026-09-09 211513.png" alt="Ảnh minh họa">
-                                        <p>Ảnh trước (trên) và sau (dưới) khi khử Gradient trông đã ổn hơn rất nhiều nhưng vẫn cần cải thiện thêm.</p>
-                                    </a>
-                                </div>
+                            </div>  
+                            <div class="anhminhhoa1">
+                                <a>
+                                    <img src="Screenshot 2026-09-17 103113.png" alt="Ảnh minh họa">
+                                </a>
+                                <a>
+                                    <img src="Screenshot 2026-09-09 211513.png" alt="Ảnh minh họa">
+                                    <p>Ảnh trước (trên) và sau (dưới) khi khử Gradient trông đã ổn hơn rất nhiều nhưng vẫn cần cải thiện thêm.</p>
+                                </a>
+                            </div>
+                            <div class="img">
                                 <p>6. Hoàn tất xử lý:</p>
                                 <ul>
                                     <li><p>Khi mô hình nền mô phỏng đúng Gradient cần loại bỏ và không bao phủ lên cấu trúc thật của tinh vân, chọn Subtraction và bấm Apply. Siril sẽ sử dụng mô hình này để hiệu chỉnh nền ảnh.</p></li>
                                 </ul>
                             </div>
                         </div>
-                    </div>
+                    </div>   
                 </div>
-            <hr>
-            <h2>4. Tải File Thực Hành.</h2>
+                <hr>
+                
             </section>
     
             <section class="practice-section" id="practice">
+                <h2><a href="#">4. Tải File Thực Hành.</a></h2>
                 <div class="file">
                     <a class="fit" href="https://drive.google.com/drive/folders/1oxUNJWswvfsIbe_XWQVmPsKmY2vsALI6?usp=sharing">
                         <img src="masterLight_BIN-1_4948x3280_EXPOSURE-30.00s_FILTER-NoFilter_RGB_fastIntegration_autocrop.jpg" alt="file xisf">
@@ -316,7 +331,6 @@
                 </div>
             </div>
         </div>
-
         <p class="contact-note">© 2026 Hướng dẫn khử Gradient bằng Siril</p>
     </footer>
     <script src="script.js"></script>
